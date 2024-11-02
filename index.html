@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide Puzzle</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Initial Popup -->
+    <div id="initial-popup" class="modal" style="display: block;">
+        <div class="modal-content">
+            <p>Up for a journey to inspiration?</p>
+            <button id="start-button" class="button-common">Yes</button>
+        </div>
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container" style="display: none;">
+        <div id="puzzle-container">
+            <!-- The puzzle grid will be generated here -->
+        </div>
+        <div class="game-controls">
+            <button id="preview-button" class="button-common">Preview Image</button>
+            <button id="play-again-button" class="button-common" style="display: none;">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Completion Popup -->
+    <div id="completion-popup" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p id="quote-text">"Your motivational quote here."</p>
+            <button id="close-completion-popup" class="button-common">Close</button>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="preview-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="close-preview-modal" class="close-button">&times;</span>
+            <img id="preview-image" src="" alt="Preview">
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

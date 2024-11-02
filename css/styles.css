@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #847577; /* Pastel tone */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Common Button Styles */
+.button-common {
+    padding: 10px 20px;
+    background-color: #FE5F55; /* Your desired background color */
+    color: #FFFFFF; /* Text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* Adds space between buttons */
+}
+
+.button-common:hover {
+    background-color: #E0483E; /* Hover color */
+}
+
+.button-common:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close Button Styles */
+.close-button {
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Game Controls Container */
+.game-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Hidden Tiles */
+.hidden {
+    visibility: hidden;
+}
+
+/* Puzzle Container */
+#puzzle-container {
+    width: 450px;
+    height: 450px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+}
+
+/* Tile Styles */
+.tile {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 450px 450px; /* Adjust according to puzzle size */
+}
+
+.tile-number {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Invalid Move Feedback */
+.invalid-move {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #puzzle-container {
+        width: 90vw;
+        height: 90vw;
+        max-width: 450px;
+        max-height: 450px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 2px;
+    }
+}
